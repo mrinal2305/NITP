@@ -1,0 +1,146 @@
+/*
+** for main body of home page
+*/
+
+section{
+	background-color: #c1f6e7;
+	overflow-y: hidden;
+}
+
+.clearfix{
+	clear: both;
+	content: "";
+	display: table;
+}
+
+.imp-links .links-row:hover{
+	text-decoration: underline;
+}
+
+.imp-links .links-row span, .imp-links .links-row a{
+	color: #0072BC;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.imp-links{
+	text-align: center;
+	padding: : 8px;
+	margin: 8px;
+}
+
+.slideshow{
+	display: inline-block;
+	float: left;
+	overflow: initial;
+	text-align: center;
+	padding: 8px;
+}
+
+.slideshow img{
+	width: 80%;
+	height: 300px;
+	box-shadow: 0 0 20px 5px #ab3d3da1;
+}
+
+.events{
+	display: inline-block;
+	font-family: Arial;
+	padding-right: 50px;
+}
+
+.events h1, .announcements h1{
+	border-left: 3px solid blue;
+	padding-left: 20px;
+    font-size: 2rem;
+    font-family: sans-serif;
+    margin: 8px 0;
+}
+
+.evt-lists{
+	height: 230px;
+	overflow-y: scroll;
+	margin-right: 60px;
+	padding-right: 20px;
+	
+}
+@media only screen and (max-width: 768px){
+	/*for mobile*/
+	.evt-lists{
+		margin-right: 5px;
+		padding-right: 0;
+	}
+	.events{
+		padding: 20px;
+	}
+	.slideshow img{
+		width: 100%;
+		height: auto;
+
+	}
+}
+
+.evt-lists .content{
+	margin: 5px 0;
+	color: grey;
+}
+.evt-lists p{
+	margin: 5px 0;
+	
+}
+.evt-lists .title a{
+	text-decoration: none;
+	color: black;
+}
+
+
+.announcements{
+	padding-left: 75px;
+	padding-right: 40px;
+}
+
+
+.misc-links{
+	padding-left: 40px;
+	padding-right: 50px;
+	text-transform: capitalize;
+	margin-top: 30px;
+}
+
+@media only screen and (max-width: 768px){
+	.misc-links{
+		padding: 15px;
+		padding-right: 0;
+	}
+}
+
+.misc-links .link{
+	display: block;
+	background-color: #224e90;
+	display: block;
+	float: left;
+	width: 45%;
+	margin: 4px 6px;
+    padding: 7px 0;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 500;
+    /* box-shadow: 5px 5px 3px 1px #c6b6b6; */
+    border-left: solid 5px #263859;
+}
+
+.misc-links .link:hover{
+	box-shadow: 5px 5px 3px 1px #c6b6b6;
+}
+
+.misc-links .links-row{
+	display: flex;
+}
+
+.misc-links .links-row::after{
+	content: "";
+	clear: both;
+	display: table;
+}

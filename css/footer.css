@@ -1,0 +1,108 @@
+/*
+** footers css
+*/
+
+footer{
+	background-color: #263859;
+	width: 100%;
+	margin: 0;
+	padding: 8px 0;
+	overflow-y: hidden;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+}
+
+footer > div {
+	float: left;
+	margin-left: 80px;
+	min-width: 220px;
+	text-transform: capitalize;
+}
+
+@media only screen and (max-width: 768px){
+	/*for mobile*/
+	footer > div{
+		width: 80%;
+		margin: 10px 10%;
+	}
+}
+
+footer h2{
+	margin: 2px 0;
+	font-weight: 500;
+	font-size: 1.2rem;
+}
+
+footer hr{
+	border-style: solid;
+	border-width: 1px 0 0 0;
+	margin: 1px 0 1rem;
+	
+}
+
+footer p{
+	font-weight: 400;
+	margin: 0.3rem 0;
+	font-size: 0.9rem;
+	color: lightgray;
+}
+
+footer a{
+	color: lightgray;
+}
+
+footer a:hover{
+	color: white;
+	text-decoration: underline;
+}
+
+.soc-med-links{
+	text-align: center;
+	padding: 20px 0;
+}
+
+.soc-med-links img{
+	height: 40px;
+	margin: 0 8px;
+	border: solid 1px #ffffff00;
+    border-radius: 50%;
+}
+
+.soc-med-links img:hover{
+	box-shadow: 0 0 3px 3px #260f0f;
+    
+}
+
+.soc-med-links + hr{
+	border: none;
+	height: 1px;
+	background-color: white;
+	margin: 0;
+	padding: 0;
+}
+
+.copyright{
+	text-align: center;
+	padding: 30px 0;
+}
+
+.copyright p{
+	font-size: 1.3rem;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

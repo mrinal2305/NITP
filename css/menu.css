@@ -1,0 +1,120 @@
+
+/*
+** contains css for main body of page having menu in left side and an iframe to show 
+** the content
+** menu - class for container having menu list
+** expnd-btn - class for img which you want to be menu butyl ton
+** content - class having iframe inside it
+*/
+
+.menu .expnd-btn img{
+	float: left;
+	height: 30px;
+	
+}
+
+.menu .expnd-btn p{
+	padding: 5px;
+    margin-left: 30px;
+}
+
+.menu .expnd-btn::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.menu .expnd-btn{
+	visibility: hidden;
+    margin: auto;
+    width: 80px;
+}
+
+
+.menu{
+	background-color: lightblue;
+	font-family: 'Raleway', helvetica, sans-serif;
+}
+.menu ul{
+	list-style-type: none;
+	display: block;
+	margin: 0;
+	padding: 0 8px;
+	text-align: center;
+	text-transform: capitalize;
+	overflow: auto;
+}
+
+.menu li{
+	padding: 0.6rem;
+	font-size: 1.2rem;
+	background-color: #224e90;
+	margin: 30px 0;
+	color: white;
+	box-shadow: 5px 5px 5px 0 black;
+	line-height: 1.4rem;
+}
+
+.menu li:hover{
+	cursor: pointer;
+	border-left: solid 8px  #263859;
+	background-color: blue;
+	font-weight: 700;
+	letter-spacing: 0.1rem;
+}
+
+.menu li.clicked{
+	border-left: solid 8px  #263859;
+	background-color: blue;
+	font-weight: 700;
+	letter-spacing: 0.1rem;
+}
+
+@media only screen and (max-width: 641px){
+	/*for mobile*/
+	.menu{
+		display: none;
+	}
+	.menu ul{
+		padding: 0;
+		display: none;
+	}
+	.menu li{
+		margin: 1px 0;
+		box-shadow: none;
+	}
+
+}
+
+.content{
+	/*background-color: yellow;*/
+	font-family: 'Roboto', sans-serif;
+}
+.content h1{
+	text-transform: capitalize;
+	width: 100%;
+	float: right;
+	padding: 0.6rem;
+	padding-left: 1rem;
+	color: white;
+	background-color: #263859;
+	box-shadow: 5px 5px 5px 4px #6f7d97;
+	border-radius: 5px 15px;
+	font-weight: 500;
+}
+
+@media only screen and (min-width: 641px){
+	.content h1{
+		width: 600px;
+		box-shadow: 10px 10px 5px 4px #6f7d97;
+		padding-left: 3rem;
+	}
+	.container{
+		display: flex;
+	}
+}
+iframe{
+	width: 100%;
+	border: none;
+	border-top: solid 1px black;
+}

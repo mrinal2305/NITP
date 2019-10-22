@@ -1,0 +1,327 @@
+/*
+** css for header and grid view
+*/
+
+*{
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+
+body{
+	width: 100%;
+	/*min-width: 1300px;*/
+	display: block;
+	margin: 0;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+	background-color: #dfdfdf;
+}
+
+@media only screen and (min-width: 641px){
+	body{
+		width: 1310px;
+		margin: auto;
+	}
+}
+
+.head-link{
+	text-align: right;
+	background-color: #224e90;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	padding: 4px;
+	font-size: 0.8rem;
+}
+.head-link a{
+	color: white;
+}
+
+.banner{
+	background-color: #263859;
+	padding: 8px;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+}
+
+@media only screen and (max-width: 768px){
+	/*for mobile*/
+	.banner{
+		position: relative;
+		height: 170px;
+	}
+	.banner > div{
+		position: absolute;
+	}
+	.banner .nitp-logo{
+		width: 20%;
+	}
+	.banner .banner-title{
+		top: 60px;
+		left: 0;
+		width: 100%;
+		padding: 10px;
+		margin: 0!important;
+		letter-spacing: 0.1rem;
+		text-align: center;
+	}
+	.banner .banner-info{
+		width: 80%;
+		right: 0;
+		padding-left: 15px;
+	}
+	.banner img{
+		margin-left: 0!important;
+	}
+}
+
+.banner img{
+	margin-left: 40px;
+}
+
+.banner-title{
+	margin-left: 40px;
+	font-size: 1.5rem;
+}
+
+.banner-info{
+	width: 300px;
+	margin-left: 290px;
+}
+
+.banner > div{
+	float: left;
+}
+
+/*for mobile navbar*/
+@media only screen and (max-width: 641px){
+	.menu-img{
+	    width: 34px;
+    overflow: hidden;
+    height: 34px;
+}
+.menu-img img{
+	    margin: auto;
+    height: 100%;
+}
+.mob.header > *{
+	float: left;
+	text-align: center;
+
+}
+
+.mob.header h1{
+	margin: 0;
+	font-weight: 500;
+	font-size: 1.8rem;
+}
+
+.mob.header{
+	
+	padding: 8px 4px;
+    width: 100%;
+    background-color: #224e90;
+    /* opacity: 0.9; */
+    color: white;
+    height: 50px;
+}
+.mob.header::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+.mob.header i{
+	    font-size: 25px;
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 50%; */
+    padding: 6px;
+    color: gainsboro;
+}
+
+.active-menu{
+	padding-left: 10px;
+}
+
+nav{
+	background-color: black;
+    padding: 1px;
+    width: 75%;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    margin-left: -75%;
+    height: 100vh;
+    padding-bottom: 50px;
+    overflow: auto;
+    text-transform: capitalize;
+}
+
+nav a{
+	color: white;
+	text-decoration: none;
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+	/*overflow: scroll;*/
+	list-style-type: none;
+}
+
+nav ul li{
+	padding: 1rem 0 1rem 0;
+}
+
+nav > ul > li > a{
+	padding-left: 1rem;
+}
+
+nav ul li.active{
+	background-color: green;
+	border: none!important;
+}
+
+nav ul li:hover{
+	border: solid 1px blue; 
+}
+
+nav ul li.expanded ul{
+	padding-top: 1rem;
+	display: block;
+}
+nav ul li.expanded{
+	padding-bottom: 0;
+}
+
+nav ul li ul{
+	display: none;
+}
+
+nav ul li ul li{
+	padding-left: 2rem;
+}
+
+nav ul li ul li:hover{
+	background-color: blue;
+}
+}
+/*end mobile navbar */
+
+@media only screen and (min-width: 641px){
+	/*for desktop*/
+	/* css for nav bar starts*/
+	.mob.header{
+		display: none;
+	}
+	nav{
+		background-color: #224e90;
+	    /*clear: both;
+	    content: "";*/
+	    width: 100%;
+	    /*display: table;*/
+	    font-family: sans-serif;
+	    z-index: 10;
+	}
+
+	nav ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		background-color: #224e90;
+	}
+	nav li{
+		float: left;
+		display: block;
+
+	}
+	nav a{
+		display: block;
+		text-decoration: none;
+		text-transform: capitalize;
+		color: white;
+		padding: 10px 24px;
+		text-align: left;
+	}
+	nav li:hover{
+		background-color: black;
+	}
+	nav .active{
+		background-color: red;
+	}
+	nav ul li ul{
+		visibility: hidden;
+		position: absolute;
+		z-index: 1;
+		/*-webkit-animation: mymove 5s infinite;
+		animation: mymove 5s infinite;*/
+		transform: scaleY(0);
+		transform-origin: top;
+		transition: transform 0.4s ease;
+
+		
+
+	}
+	nav ul li ul li{
+		float: none;
+		display: block;
+		/*width: 200px;*/
+		/*height: 30px; commenting this makes possible diff height for items in menu dropdown*/ 
+		border-top: 1px solid white;
+		font-size: 0.9rem;
+	}
+	nav ul li ul li a{
+		padding: 7px 24px;
+	}
+	nav ul li:hover ul{
+		visibility: visible;
+		transform: scaleY(1);
+		/*transition: transform 0.4s ease;*/
+		/*transform-origin: top;*/
+	}*/
+
+	/*css for nav bar ends*/
+}
+
+
+
+
+
+/*grid view starts*/
+
+.col-1{width: 8.33%;}
+.col-2{width: 16.66%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33%;}
+.col-5{width: 41.66%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33%;}
+.col-8{width: 66.66%;}
+.col-9{width: 75%;}
+.col-10{width: 83.33%;}
+.col-11{width: 91.66%;}
+.col-12{width: 100%;}
+
+[class*="col-"]{
+	float: left;
+	padding: 15px;
+}
+
+.row::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+@media only screen and (max-width: 641px){
+	/*for mobile*/
+	[class*="col-"]{
+		width: 100%;
+	}
+}
+
+/*grid view ends*/
+
+
